@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0SR-js-0su">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="webTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" horizontalHuggingPriority="450" misplaced="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xr8-sF-fyd">
+                                <frame key="frameInset" minY="129" width="320" height="439"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                            </webView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="PpM-VS-nO3">
+                                <frame key="frameInset" minX="150" minY="321" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="www.wp.pl" borderStyle="roundedRect" placeholder="enter url" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yMz-ng-FmF">
+                                <frame key="frameInset" minX="16" minY="72" width="174" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="00P-3g-maF">
+                                <frame key="frameInset" minX="206" minY="72" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Go"/>
+                                <connections>
+                                    <action selector="goToUrl:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cjQ-Zh-Mcg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xr8-sF-fyd" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="A3n-Xx-65O"/>
+                            <constraint firstAttribute="trailing" secondItem="xr8-sF-fyd" secondAttribute="trailing" id="OZa-E2-XIe"/>
+                            <constraint firstItem="xr8-sF-fyd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="2" id="Tn3-gw-V4p"/>
+                            <constraint firstItem="xr8-sF-fyd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tYl-t1-QdU"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="FkV-PC-hUw">
+                        <barButtonItem key="leftBarButtonItem" title="webView" id="LKw-K6-IYl">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="stop" id="NKM-ux-Hbi">
+                                <connections>
+                                    <action selector="stopButton:" destination="BYZ-38-t0r" id="1CJ-WP-r9m"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="fastForward" id="hu5-tv-S3a">
+                                <connections>
+                                    <action selector="forwardButton:" destination="BYZ-38-t0r" id="g1N-Qm-GOd"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="rewind" id="XUG-dw-8Dh">
+                                <connections>
+                                    <action selector="backButton:" destination="BYZ-38-t0r" id="O61-pJ-4uE"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="refresh" id="6pK-zm-74u">
+                                <connections>
+                                    <action selector="refreshButton:" destination="BYZ-38-t0r" id="eVu-2f-LvQ"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="play" id="gq4-JG-sQp">
+                                <connections>
+                                    <action selector="playButton:" destination="BYZ-38-t0r" id="qtk-Ub-OVI"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="myActivityIndicator" destination="PpM-VS-nO3" id="m9p-BY-yhf"/>
+                        <outlet property="textField" destination="yMz-ng-FmF" id="6u9-SO-6Fb"/>
+                        <outlet property="webView" destination="xr8-sF-fyd" id="s1G-80-juD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="631.875" y="182.74647887323943"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zOt-mV-cIT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0SR-js-0su" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4r8-al-M08">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="IBB-F4-slf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mXX-lY-55I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-71.25" y="182.74647887323943"/>
+        </scene>
+    </scenes>
+</document>
